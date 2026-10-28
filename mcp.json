@@ -1,0 +1,45 @@
+{
+  "mcpServers": {
+    "bch-insurance-ai": {
+      "tools": [
+        {
+          "name": "issue_cashtoken_policy",
+          "description": "Mints a CashToken-backed parametric insurance policy for merchant invoice protection",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "merchant_address": {
+                "type": "string"
+              },
+              "coverage_bch": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "merchant_address",
+              "coverage_bch"
+            ]
+          }
+        },
+        {
+          "name": "verify_double_spend_proof",
+          "description": "Verifies cryptographic double-spend proof on Bitcoin Cash to trigger zero-conf payout",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "txid": {
+                "type": "string"
+              },
+              "proof_data": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "txid"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

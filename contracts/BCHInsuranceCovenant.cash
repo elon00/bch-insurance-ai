@@ -1,0 +1,21 @@
+// CashScript Contract
+// BCH Insurance AI Parametric Covenant
+pragma cashscript ^0.8.0;
+
+contract BCHInsuranceCovenant(
+    pubkey merchantPubKey,
+    pubkey insurerPubKey,
+    bytes20 tokenCategory,
+    int maxIndemnitySats
+) {
+    function compensateMerchant(sig insurerSig, int actualLossSats) {
+        require(checkSig(insurerSig, insurerPubKey));
+        require(actualLossSats <= maxIndemnitySats);
+        require(tx.outputs[0].value >= actualLossSats);
+    }
+
+    function cancelPolicy(sig merchantSig) {
+        require(checkSig(merchantSig, merchantPubKey));
+        require(tx.age >= 500); // Timelock requirement
+    }
+}
