@@ -1,0 +1,10 @@
+{
+  "project": "bch-insurance-ai",
+  "commit_sha": "0bfa0d7af83369f0814e3b5e21dc01c0f7efd944",
+  "timestamp": "2026-10-28T07:44:36.739188Z",
+  "score": 100,
+  "theme": "Merchant Payment Protection & CashToken Covenant Protocol",
+  "blockchain": "Bitcoin Cash (BCH UTXO + CashTokens)",
+  "contract": "BCHInsuranceCovenant.cash",
+  "reality_check_output": "======================================================================\n    REALITY CHECK HARNESS: bch-insurance-ai ($BCHINS)\n    Chain: Bitcoin Cash (BCH UTXO + CashTokens)\n======================================================================\n[PASS] Gate 1: Conway Non-Linear Invariant State Engine verified (+25)\n[PASS] Gate 2: Smart Contract verified (BCHInsuranceCovenant.cash) (+25)\n[PASS] Gate 3: Native MCP Tools schema verified (+20)\n[PASS] Gate 4: Interactive Launchpad UI verified (+15)\n[PASS] Gate 5: CI/CD Pipeline & Zero Key Exposure verified (+15)\n----------------------------------------------------------------------\nFINAL REALITY VERIFICATION SCORE: 100/100\nVERDICT: 100/100 GENUINE GREEN - READY FOR PRODUCTION\n======================================================================\n"
+}
